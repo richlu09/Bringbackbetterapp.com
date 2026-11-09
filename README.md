@@ -1,2 +1,2 @@
-# Bringbackbetterapp.com
+# Bringbackbetter
 The community bringing generations together
