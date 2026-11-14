@@ -1,143 +1,44 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#173d32">
-  <title>Bring Back Better | Together We Can</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #24352e;
-      background: #f7f8f4;
-      line-height: 1.6;
-    }
-    header {
-      background: #173d32;
-      color: white;
-      padding: 22px 7%;
-      text-align: center;
-    }
-    header h1 { margin: 0; font-size: 27px; }
-    header p { margin: 4px 0 0; }
-    .hero {
-      background: #e6eee7;
-      text-align: center;
-      padding: 75px 20px;
-    }
-    .hero h2 {
-      font-size: clamp(34px, 7vw, 54px);
-      line-height: 1.15;
-      margin: 0 auto 20px;
-      max-width: 700px;
-      color: #173d32;
-    }
-    .hero p {
-      font-size: 19px;
-      max-width: 600px;
-      margin: 0 auto 28px;
-    }
-    .button {
-      display: inline-block;
-      background: #173d32;
-      color: white;
-      padding: 13px 27px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 48px 22px;
-      text-align: center;
-      max-width: 950px;
-      margin: auto;
-    }
-    section h2 { color: #173d32; font-size: 30px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px #0000000d;
-    }
-    .card h3 { color: #285c48; }
-    footer {
-      background: #173d32;
-      color: white;
-      text-align: center;
-      padding: 28px 15px;
-    }
-    footer p { margin: 5px; }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102e60">
+<meta name="description" content="Bring Back Better brings people ages 16 and older together through kindness, community events, and practical support.">
+<title>Bring Back Better | Together We Can</title>
+<style>
+:root{--navy:#102e60;--red:#bf283b;--blue:#2457a7;--pale:#f4f7fc;--ink:#1c2940}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:white}
+a{color:inherit}a:focus-visible{outline:3px solid #ffb53d;outline-offset:4px}
+.wrap{max-width:1080px;margin:auto;padding:0 22px}
+header{background:var(--navy);color:#fff}.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+.brand{font-size:1.25rem;font-weight:900;letter-spacing:.04em;text-decoration:none}.brand span{color:#ff6d79}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.93rem}
+.hero{background:linear-gradient(135deg,#102e60,#2457a7);color:white;padding:84px 0 88px}
+.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.1;max-width:780px;margin:14px 0 20px}
+.hero p{max-width:650px;font-size:1.17rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;border-radius:9px;padding:12px 21px;font-weight:800;text-decoration:none;background:var(--red);color:white}
+.btn.secondary{background:white;color:var(--navy)}
+section{padding:66px 0}section:nth-of-type(even){background:var(--pale)}
+h2{font-size:clamp(1.7rem,4vw,2.35rem);line-height:1.2;color:var(--navy);margin:0 0 18px}
+.lead{max-width:720px;font-size:1.07rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px;margin-top:28px}
+.card{background:white;border:1px solid #dbe3ef;border-radius:15px;padding:25px;box-shadow:0 5px 18px #102e6010}
+.card h3{color:var(--navy);margin:0 0 9px;font-size:1.2rem}.card p{margin:0}
+.tag{display:inline-block;background:#e9eef9;color:var(--navy);padding:3px 10px;border-radius:99px;font-size:.8rem;font-weight:800;margin-bottom:12px}
+.note{border-left:4px solid var(--red);padding:14px 18px;background:#fff4f5;border-radius:0 9px 9px 0;margin-top:24px}
+footer{background:var(--navy);color:white;padding:34px 0}footer p{margin:5px 0}
+@media(max-width:600px){.hero{padding:62px 0}.nav{align-items:flex-start}nav{gap:12px}section{padding:48px 0}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>BRING BACK BETTER</h1>
-    <p>Bringing generations together</p>
-  </header>
-
-  <main>
-    <div class="hero">
-      <h2>Let's Make the World a Little Better.</h2>
-      <p>
-        A community where people come together,
-        share wisdom, spread kindness, and make
-        a positive difference.
-      </p>
-      <a class="button" href="#mission">Discover Our Mission</a>
-    </div>
-
-    <section id="mission">
-      <h2>Our Mission</h2>
-      <p>
-        Bring Back Better is about bringing people
-        together. We believe everyone has something
-        valuable to share, no matter their age or
-        background.
-      </p>
-      <p>Our community welcomes people ages 16 and older.</p>
-    </section>
-
-    <section id="community">
-      <h2>What We Believe In</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Kindness</h3>
-          <p>A little kindness can change someone's day.</p>
-        </div>
-        <div class="card">
-          <h3>Wisdom</h3>
-          <p>Every generation has lessons worth sharing.</p>
-        </div>
-        <div class="card">
-          <h3>Togetherness</h3>
-          <p>We are stronger when we support one another.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Better Starts With Us</h2>
-      <p>
-        One person, one kind act, one positive
-        change at a time.
-      </p>
-      <a class="button" href="#mission">Be Part of Something Better</a>
-    </section>
-  </main>
-
-  <footer>
-    <p><strong>BRING BACK BETTER</strong></p>
-    <p>Better Together. Better Tomorrow.</p>
-    <p>© 2026 Bring Back Better</p>
-  </footer>
-</body>
-</html>
+<header><div class="wrap nav"><a class="brand" href="#top">BRING BACK <span>BETTER</span></a><nav aria-label="Main navigation"><a href="#mission">Our mission</a><a href="#community">Community</a><a href="#events">Events</a><a href="#assistance">Helping others</a></nav></div></header>
+<main id="top">
+<div class="hero"><div class="wrap"><div class="eyebrow">Together we can</div><h1>Better starts with all of us.</h1><p>A welcoming place to build stronger communities, share kindness and respect, bring generations together, and help neighbors thrive.</p><div class="actions"><a class="btn" href="#community">Explore our vision</a><a class="btn secondary" href="#mission">Why we exist</a></div></div></div>
+<section id="mission"><div class="wrap"><h2>Our mission</h2><p class="lead">Bring Back Better is a community-first movement built on kindness, respect, honesty, accountability, family, and connection. Everyone age <strong>16 or older</strong> is welcome, with <strong>no upper age limit</strong>. We believe every generation has something valuable to offer.</p><p>We're starting locally, with the goal of growing into communities across the country.</p></div></section>
+<section id="community"><div class="wrap"><h2>What brings us together</h2><div class="cards"><article class="card"><h3>Kindness &amp; respect</h3><p>Encouraging thoughtful conversations, good deeds, and treating people with dignity.</p></article><article class="card"><h3>Across generations</h3><p>Connecting neighbors to share experiences, skills, stories, and wisdom.</p></article><article class="card"><h3>Community connections</h3><p>Making room for local ideas, participation, and neighbors supporting neighbors.</p></article></div></div></section>
+<section id="events"><div class="wrap"><h2>Community events</h2><p class="lead">Our vision includes a place where community members can share local events and activities. As Bring Back Better grows, we also hope to host events that bring people together in person.</p><div class="note"><strong>Coming soon:</strong> Event posting and event listings are planned features and are not yet available on this website.</div></div></section>
+<section id="assistance"><div class="wrap"><h2>Give help. Find hope.</h2><p class="lead">We're planning an assisted fund focused on essential needs such as food and bills, with an emphasis on accountability, privacy, and working with trusted community partners.</p><div class="cards"><article class="card"><span class="tag">Planned</span><h3>Food support</h3><p>Help connect people facing food insecurity with reliable local assistance.</p></article><article class="card"><span class="tag">Planned</span><h3>Essential bills</h3><p>Explore a careful, verified process for supporting essential household expenses.</p></article><article class="card"><span class="tag">Our commitment</span><h3>Trust &amp; safety</h3><p>Design safeguards and clear rules before accepting or distributing assistance funds.</p></article></div><div class="note"><strong>Not accepting donations or assistance requests yet.</strong> The fund and its verification, payment, and distribution processes have not launched.</div></div></section>
+<section id="future"><div class="wrap"><h2>Building something better, together</h2><p class="lead">Bring Back Better is in its early stages. Our first focus is a strong local community experience, with a longer-term goal of a mobile-friendly platform for iPhone and Android and eventual nationwide growth.</p><a class="btn" href="#top">Back to top</a></div></section>
+</main><footer><div class="wrap"><strong>BRING BACK BETTER</strong><p>Better Together. Better Tomorrow.</p><p>For ages 16 and older · © 2026 Bring Back Better</p></div></footer>
+</body></html>
