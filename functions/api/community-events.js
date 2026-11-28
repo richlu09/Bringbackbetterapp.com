@@ -21,7 +21,12 @@ async function authorized(request, secret) {
 
 export async function onRequest({ request, env }) {
   const db = env.EVENTS_DB;
-  if (!db || !env.EVENTS_ADMIN_TOKEN) return json({ error: 'Community event posting is being set up.' }, 503);
+  if (!db || !env.EVENTS_ADMIN_TOKEN) {
+    const missing = [];
+    if (!db) missing.push('EVENTS_DB');
+    if (!env.EVENTS_ADMIN_TOKEN) missing.push('EVENTS_ADMIN_TOKEN');
+    return json({ error: 'Community event posting is being set up.', missing }, 503);
+  }
 
   try {
     const admin = new URL(request.url).searchParams.get('view') === 'admin';
